@@ -1,0 +1,70 @@
+{
+  "name": "share-snippet",
+  "version": "0.0.0",
+  "publisher": "AleG94",
+  "displayName": "Share Snippet",
+  "description": "Share code on the fly with Pastie",
+  "author": {
+    "name": "Alessandro Genovese"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "share",
+    "snippet",
+    "paste",
+    "selection",
+    "code"
+  ],
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "activationEvents": [
+    "onCommand:share-snippet.shareSelection",
+    "onCommand:share-snippet.shareFile"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "share-snippet.shareSelection",
+        "title": "Share Snippet: Selected Code"
+      },
+      {
+        "command": "share-snippet.shareFile",
+        "title": "Share Snippet: File"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AleG94/vscode-share-snippet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AleG94/vscode-share-snippet/issues"
+  },
+  "homepage": "https://github.com/AleG94/vscode-share-snippet#readme",
+  "license": "MIT",
+  "icon": "images/logo.png",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "qs": "^6.9.6"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.53.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  }
+}
